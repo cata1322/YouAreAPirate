@@ -21,7 +21,7 @@ namespace AlumnoEjemplos.MiGrupo
         /// </summary>
         public override string getCategory()
         {
-            return "AlumnoEjemplos";
+            return "Pirate Ship";
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace AlumnoEjemplos.MiGrupo
         /// </summary>
         public override string getName()
         {
-            return "Grupo 99";
+            return "You Are A Pirate";
         }
 
         /// <summary>
@@ -62,8 +62,7 @@ namespace AlumnoEjemplos.MiGrupo
             GuiController.Instance.UserVars.addVar("variablePrueba");
 
             //Cargar valor en UserVar
-            GuiController.Instance.UserVars.setValue("variablePrueba", 5451);
-
+            GuiController.Instance.UserVars.setValue("variablePrueba", 5451);            
 
 
             ///////////////MODIFIERS//////////////////
