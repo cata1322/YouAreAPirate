@@ -12,7 +12,6 @@ namespace AlumnoEjemplos.MiGrupo
 {
     /// <summary>
     /// Ejemplo del alumno.
-    /// probando un commint and push
     /// </summary>
     public class EjemploAlumno : TgcExample
     {
