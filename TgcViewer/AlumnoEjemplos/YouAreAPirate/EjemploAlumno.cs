@@ -11,7 +11,8 @@ using TgcViewer.Utils.Modifiers;
 namespace AlumnoEjemplos.MiGrupo
 {
     /// <summary>
-    /// Ejemplo del alumno
+    /// Ejemplo del alumno.
+    /// probando un commint and push
     /// </summary>
     public class EjemploAlumno : TgcExample
     {
