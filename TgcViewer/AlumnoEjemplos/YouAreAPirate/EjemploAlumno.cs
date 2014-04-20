@@ -8,13 +8,19 @@ using System.Drawing;
 using Microsoft.DirectX;
 using TgcViewer.Utils.Modifiers;
 
-namespace AlumnoEjemplos.MiGrupo
+namespace AlumnoEjemplos.YouAreAPirate
 {
     /// <summary>
     /// Ejemplo del alumno.
     /// </summary>
     public class EjemploAlumno : TgcExample
     {
+
+        public void MetodoEjemeplo()
+        { 
+
+        }
+
         /// <summary>
         /// Categoría a la que pertenece el ejemplo.
         /// Influye en donde se va a haber en el árbol de la derecha de la pantalla.
@@ -45,8 +51,8 @@ namespace AlumnoEjemplos.MiGrupo
         /// Escribir aquí todo el código de inicialización: cargar modelos, texturas, modifiers, uservars, etc.
         /// Borrar todo lo que no haga falta
         /// </summary>
-        public override void init()
-        {
+        public override void init()        {
+            
             //GuiController.Instance: acceso principal a todas las herramientas del Framework
 
             //Device de DirectX para crear primitivas
@@ -77,7 +83,8 @@ namespace AlumnoEjemplos.MiGrupo
             //Crear un modifier para modificar un vértice
             GuiController.Instance.Modifiers.addVertex3f("valorVertice", new Vector3(-100, -100, -100), new Vector3(50, 50, 50), new Vector3(0, 0, 0));
 
-
+            Escenario.InicializarEscenario(10, 700, 700);
+            Barco.InicializarBarcoPirata(5);
 
             ///////////////CONFIGURAR CAMARA ROTACIONAL//////////////////
             //Es la camara que viene por default, asi que no hace falta hacerlo siempre
