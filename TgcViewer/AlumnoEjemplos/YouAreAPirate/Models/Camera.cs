@@ -13,7 +13,7 @@ namespace AlumnoEjemplos.YouAreAPirate
 
         public void initializeCamera(TgcBoundingBox objective)
         {
-            GuiController.Instance.ThirdPersonCamera.Enable = true;
+      //      GuiController.Instance.ThirdPersonCamera.Enable = true;
             GuiController.Instance.ThirdPersonCamera.setCamera(objective.Position, 50, 80);
         }
 
