@@ -1,4 +1,5 @@
-﻿using Microsoft.DirectX;
+﻿using System.IO;
+using Microsoft.DirectX;
 using Microsoft.DirectX.DirectInput;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Text;
 using TgcViewer;
 using TgcViewer.Utils.Input;
 using TgcViewer.Utils.TgcGeometry;
+using TgcViewer.Utils.TgcSceneLoader;
 
 namespace AlumnoEjemplos.YouAreAPirate
 {
@@ -16,17 +18,26 @@ namespace AlumnoEjemplos.YouAreAPirate
         //variable que indica la velocidad con que se movera el barco.
         const float MOVEMENT_SPEED = 10f;
         TgcD3dInput input = GuiController.Instance.D3dInput;
-        TgcBox ship;
+        TgcMesh ship;
+        
 
         public void initializeShip()
         {
             //Creacion del barco. Por ahora es una caja-cubo.
-            Vector3 center = new Vector3(0, 0, 0);
-            Vector3 size = new Vector3(10, 10, 10);
-            Color color = Color.Brown;
-            ship = TgcBox.fromSize(center,size, color);
+            //Vector3 center = new Vector3(0, 0, 0);
+            //Vector3 size = new Vector3(10, 10, 10);
+            //Color color = Color.Brown;
+            //ship = TgcBox.fromSize(center,size, color);
 
             //Ver tutorial5 para cargar un barco en 3d.
+            
+            float scale = 0.03f;
+            string urlMesh = Path.Combine(GuiController.Instance.AlumnoEjemplosMediaDir, @"BarcoPirata\BarcoPirata-TgcScene.xml");
+
+            TgcSceneLoader loader = new TgcSceneLoader();
+            TgcScene scene = loader.loadSceneFromFile(urlMesh);
+            ship = (TgcMesh) scene.Meshes[0];
+            ship.Scale = new Vector3(scale, scale, scale);
 
         }
 

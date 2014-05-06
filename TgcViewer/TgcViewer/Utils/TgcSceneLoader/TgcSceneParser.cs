@@ -85,7 +85,7 @@ namespace TgcViewer.Utils.TgcSceneLoader
                     }
                 }
 
-                tgcSceneData.materialsData[i++] = material;
+                 tgcSceneData.materialsData[i++] = material;
             }
 
 

@@ -14,3 +14,19 @@ E:\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.exe
 E:\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.pdb
 E:\TGC\TgcViewer\TgcViewer.exe
 E:\TGC\TgcViewer\TgcViewer.pdb
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer.exe.config
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.exe
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.pdb
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.csprojResolveAssemblyReference.cache
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.MainForm.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Properties.Resources.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Utils.Modifiers.TgcMeshBrowser.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Utils.Modifiers.TgcTextureBrowser.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Utils.Networking.TgcNetworkingModifierClientsDialog.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Utils.Networking.TgcNetworkingModifierControl.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Utils.Networking.TgcNetworkingModifierServersDialog.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Utils.Ui.AboutWindow.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.Utils.Ui.FullScreenPanel.resources
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer\obj\Debug\TgcViewer.csproj.GenerateResource.Cache
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer.exe
+E:\Facultad\Tecnicas de Graficos por Computadora\TGC\TgcViewer\TgcViewer.pdb

@@ -44,7 +44,7 @@ namespace AlumnoEjemplos.YouAreAPirate
         {
             initializeEnviroment();
             initializeShip();
-            initializeCamera(ship.BoundingBox);
+            initializeCamera(ship);
         }
 
 
