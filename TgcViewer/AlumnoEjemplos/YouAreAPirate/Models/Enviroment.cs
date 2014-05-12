@@ -14,9 +14,9 @@ using TgcViewer.Utils.TgcSceneLoader;
 namespace AlumnoEjemplos.YouAreAPirate
 {
     public partial class EjemploAlumno
-    {   
+    {
 
-        TgcEditableLand ocean;
+        TgcCustomEditableLand ocean;
         TgcSphere sun;
         TgcSphere skyBox;
         float totalTime;
@@ -28,7 +28,11 @@ namespace AlumnoEjemplos.YouAreAPirate
             totalTime = 0;
           
             //OCEAN
-            ocean = new TgcEditableLand();
+            int editable_ocea_grid_size = 10;
+            int squares_per_side = 5;
+            GuiController.Instance.Modifiers.addFloat("intensity", 0.1f, 10, 0.2f);
+            GuiController.Instance.Modifiers.addInt("transformation_point", 0, editable_ocea_grid_size - 1, 0);
+            ocean = new TgcCustomEditableLand(editable_ocea_grid_size, squares_per_side);
             ocean.setTexture(TgcTexture.createTexture(GuiController.Instance.AlumnoEjemplosMediaDir + "Textures\\environment\\water_texture.jpg"));
             ocean.Position = new Vector3(-120, 0, -120);
             ocean.Scale = new Vector3(3, 3, 3);
@@ -58,19 +62,14 @@ namespace AlumnoEjemplos.YouAreAPirate
 
             totalTime += elapsedTime;
 
-            ocean.setVerticesY(TgcEditableLand.SELECTION_CENTER, (float) Math.Cos(totalTime));
-            ocean.setVerticesY(TgcEditableLand.SELECTION_INTERIOR_RING, (float)Math.Sin(totalTime+1));
-            ocean.setVerticesY(TgcEditableLand.SELECTION_EXTERIOR_RING, (float)Math.Sin(totalTime));
-            ocean.setVerticesY(TgcEditableLand.SELECTION_TOP_SIDE, (float)Math.Sin(totalTime));
-            ocean.setVerticesY(TgcEditableLand.SELECTION_LEFT_SIDE, (float)Math.Sin(totalTime));
-            ocean.setVerticesY(TgcEditableLand.SELECTION_RIGHT_SIDE, (float)Math.Sin(totalTime));
-            ocean.setVerticesY(TgcEditableLand.SELECTION_BOTTOM_SIDE, (float)Math.Sin(totalTime));
+            //ocean.setVertexY( (int)GuiController.Instance.Modifiers["transformation_point"], (float)Math.Cos(totalTime) * (float)GuiController.Instance.Modifiers["intensity"]);
+            ocean.setVerticesY(new int[] {50}, (float)Math.Sin(totalTime));
             
             ocean.updateValues();
 
             ocean.render();
-            sun.render();
-            skyBox.render();
+//           sun.render();
+//           skyBox.render();
         }
     }
 }

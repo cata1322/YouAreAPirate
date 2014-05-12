@@ -92,6 +92,7 @@
     <Compile Include="YouAreAPirate\Models\Camera.cs" />
     <Compile Include="YouAreAPirate\Models\Enviroment.cs" />
     <Compile Include="YouAreAPirate\Models\Ship.cs" />
+    <Compile Include="YouAreAPirate\Models\TgcCustomEditableLand.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TgcViewer\TgcViewer.csproj">
