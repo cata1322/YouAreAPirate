@@ -23,21 +23,14 @@ namespace AlumnoEjemplos.YouAreAPirate
 
         public void initializeShip()
         {
-            //Creacion del barco. Por ahora es una caja-cubo.
-            //Vector3 center = new Vector3(0, 0, 0);
-            //Vector3 size = new Vector3(10, 10, 10);
-            //Color color = Color.Brown;
-            //ship = TgcBox.fromSize(center,size, color);
-
-            //Ver tutorial5 para cargar un barco en 3d.
-            
-            float scale = 0.03f;
+            float scale = 0.2f;
             string urlMesh = Path.Combine(GuiController.Instance.AlumnoEjemplosMediaDir, @"BarcoPirata\BarcoPirata-TgcScene.xml");
 
             TgcSceneLoader loader = new TgcSceneLoader();
             TgcScene scene = loader.loadSceneFromFile(urlMesh);
             ship = (TgcMesh) scene.Meshes[0];
             ship.Scale = new Vector3(scale, scale, scale);
+            ship.Position = new Vector3(0,20,0);
 
         }
 
@@ -74,6 +67,7 @@ namespace AlumnoEjemplos.YouAreAPirate
 
             //Aplicar movimiento
             ship.move(movement);
+            //ship.rotateY(0.0001f);
         }
 
         public void loadShip(float elapsedTime)
