@@ -23,8 +23,8 @@ namespace AlumnoEjemplos.YouAreAPirate
 
         public void initializeShip()
         {
-            float scale = 0.2f;
-            string urlMesh = Path.Combine(GuiController.Instance.AlumnoEjemplosMediaDir, @"BarcoPirata\BarcoPirata-TgcScene.xml");
+            float scale = 0.07f;
+            string urlMesh = Path.Combine(GuiController.Instance.AlumnoEjemplosMediaDir, @"BarcoPirata\BarcoPirata2-TgcScene.xml");
 
             TgcSceneLoader loader = new TgcSceneLoader();
             TgcScene scene = loader.loadSceneFromFile(urlMesh);
