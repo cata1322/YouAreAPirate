@@ -46,6 +46,8 @@ namespace AlumnoEjemplos.YouAreAPirate
             initializeEnviroment();
             initializeShip();
             initializeCamera(ship);
+            //pueba del sol
+            initializeSol();
         }
 
 
@@ -55,6 +57,8 @@ namespace AlumnoEjemplos.YouAreAPirate
             loadEnviroment(elapsedTime);
             loadShip(elapsedTime);
             loadCamera(elapsedTime, ship.BoundingBox);
+            //pueba del sol
+            loadSol(elapsedTime);
 
         }
 

@@ -30,7 +30,7 @@ namespace AlumnoEjemplos.YouAreAPirate
             TgcScene scene = loader.loadSceneFromFile(urlMesh);
             ship = (TgcMesh) scene.Meshes[0];
             ship.Scale = new Vector3(scale, scale, scale);
-            ship.Position = new Vector3(0,20,0);
+            ship.Position = new Vector3(70,20,0);
 
         }
 

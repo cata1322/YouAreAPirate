@@ -90,6 +90,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YouAreAPirate\EjemploAlumno.cs" />
     <Compile Include="YouAreAPirate\Models\Camera.cs" />
+    <Compile Include="YouAreAPirate\Models\Sol.cs" />
     <Compile Include="YouAreAPirate\Models\Enviroment.cs" />
     <Compile Include="YouAreAPirate\Models\Ship.cs" />
   </ItemGroup>
@@ -116,7 +117,19 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AlumnoMedia\BarcoPirata\BarcoPirata-TgcScene.xml" />
+    <Content Include="AlumnoMedia\BarcoPirata\BarcoPirata2-TgcScene.xml" />
+    <Content Include="AlumnoMedia\BarcoPirata\Textures\american_cherry.png" />
+    <Content Include="AlumnoMedia\BarcoPirata\Textures\beechwood_cherry.png" />
+    <Content Include="AlumnoMedia\BarcoPirata\Textures\beechwood_natural.png" />
+    <Content Include="AlumnoMedia\BarcoPirata\Textures\black.png" />
+    <Content Include="AlumnoMedia\BarcoPirata\Textures\white.png" />
+    <Content Include="AlumnoMedia\BarcoPirata\Textures\WoodsPlastics.FinishCarpentry.Wood.Cocobolo.jpg" />
+    <Content Include="AlumnoMedia\Textures\environment\sky_patten.jpg" />
+    <Content Include="AlumnoMedia\Textures\environment\Sun.jpg" />
+    <Content Include="AlumnoMedia\Textures\environment\water_texture.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
