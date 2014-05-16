@@ -43,6 +43,7 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -93,6 +94,7 @@
     <Compile Include="YouAreAPirate\Models\Sol.cs" />
     <Compile Include="YouAreAPirate\Models\Enviroment.cs" />
     <Compile Include="YouAreAPirate\Models\Ship.cs" />
+    <Compile Include="YouAreAPirate\Modifiers\Modifiers.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TgcViewer\TgcViewer.csproj">

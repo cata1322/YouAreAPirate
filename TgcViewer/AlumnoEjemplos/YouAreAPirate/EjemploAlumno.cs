@@ -45,38 +45,20 @@ namespace AlumnoEjemplos.YouAreAPirate
             loadModifiers();
             initializeEnviroment();
             initializeShip();
-            initializeCamera(ship);
+            initializeCamera(ship.ship);
             //pueba del sol
-            initializeSol();
-        }
+            //initializeSol();
+        }       
 
 
         public override void render(float elapsedTime)
         {
-
             loadEnviroment(elapsedTime);
             loadShip(elapsedTime);
-            loadCamera(elapsedTime, ship.BoundingBox);
+            loadCamera(elapsedTime, ship.getBoundingBox());
             //pueba del sol
-            loadSol(elapsedTime);
-
-        }
-
-        private void loadModifiers()
-        {
-            GuiController.Instance.Modifiers.addVertex3f("skyPosition", new Vector3(0, 0, 0), new Vector3(1000, 1000, 1000), new Vector3(20, 20, 20));
-            GuiController.Instance.Modifiers.addInt("skyRadius", 100, 10000, 2000);
-            GuiController.Instance.Modifiers.addVertex3f("oceanPosition", new Vector3(-1000, -1000, -1000), new Vector3(1000, 1000, 1000), new Vector3(-600, 0, -600));
-            GuiController.Instance.Modifiers.addVertex3f("oceanScale", new Vector3(10, 10, 10), new Vector3(1000, 1000, 1000), new Vector3(20, 20, 20));
-
-
-            //GuiController.Instance.Modifiers.addVertex3f("rotation", new Vector3(-180, -180, -180), new Vector3(180, 180, 180), new Vector3(0, 0, 0));
-            //GuiController.Instance.Modifiers.addTexture("texture", GuiController.Instance.ExamplesMediaDir + "\\Texturas\\madera.jpg");
-            //GuiController.Instance.Modifiers.addVertex2f("offset", new Vector2(-0.5f, -0.5f), new Vector2(0.9f, 0.9f), new Vector2(0, 0));
-            //GuiController.Instance.Modifiers.addVertex2f("tiling", new Vector2(0.1f, 0.1f), new Vector2(4, 4), new Vector2(1, 1));
-            //GuiController.Instance.Modifiers.addColor("color", Color.White);
-            //GuiController.Instance.Modifiers.addBoolean("boundingBox", "BoundingBox", false);
-        }
+            //loadSol(elapsedTime);
+        }       
 
 
         public override void close()
