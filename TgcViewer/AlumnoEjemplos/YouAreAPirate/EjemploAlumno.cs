@@ -16,6 +16,7 @@ namespace AlumnoEjemplos.YouAreAPirate
     /// </summary>
     public partial class EjemploAlumno : TgcExample
     {
+        List<ShipObject> shipEnemies { get; set; }        
 
         public void MetodoEjemeplo()
         {
@@ -42,13 +43,18 @@ namespace AlumnoEjemplos.YouAreAPirate
 
         public override void init()
         {
+            shipEnemies = new List<ShipObject>();
+            shipEnemies.Add(new ShipObject(EnumShipType.SS_Holigan, new Vector3(0, 0, 50)));
             loadModifiers();
             initializeEnviroment();
-            initializeShip();
+            initializeShip(EnumShipType.Standard,new Vector3(0,0,0));
+            initializeEnemies(shipEnemies);
             initializeCamera(ship.ship);
             //pueba del sol
             //initializeSol();
-        }       
+        }
+
+        
 
 
         public override void render(float elapsedTime)
@@ -56,9 +62,12 @@ namespace AlumnoEjemplos.YouAreAPirate
             loadEnviroment(elapsedTime);
             loadShip(elapsedTime);
             loadCamera(elapsedTime, ship.getBoundingBox());
+            loadEnemies(elapsedTime);
             //pueba del sol
             //loadSol(elapsedTime);
-        }       
+        }
+
+         
 
 
         public override void close()
