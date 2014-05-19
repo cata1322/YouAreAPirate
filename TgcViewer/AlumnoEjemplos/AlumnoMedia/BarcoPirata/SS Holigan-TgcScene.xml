@@ -11,6 +11,7 @@
 				<specular>[229.5,229.5,229.5,255.0]</specular>
 				<opacity>100.0</opacity>
 				<alphaBlendEnable>false</alphaBlendEnable>
+				<bitmap uvTiling='[0.0208333,0.0208333]' uvOffset='[0.0,0.0]'>beechwood_natural.png</bitmap>
 			</subM>
 			<subM name='multi_Bryce_001' type='Standardmaterial'>
 				<ambient>[149.94,149.94,149.94,255.0]</ambient>

@@ -55,7 +55,7 @@ namespace AlumnoEjemplos.YouAreAPirate
                         {
                             //se crea un barco standard (el que usamos hasta ahora)
                             this.shipType = shipType;
-                            urlMesh = Path.Combine(GuiController.Instance.AlumnoEjemplosMediaDir, @"BarcoPirata\BarcoPirata-TgcScene.xml");
+                            urlMesh = Path.Combine(GuiController.Instance.AlumnoEjemplosMediaDir, @"BarcoPirata\BarcoPirata2-TgcScene.xml");
                             scene = loader.loadSceneFromFile(urlMesh);
                             Scale(0.05f);
                         }

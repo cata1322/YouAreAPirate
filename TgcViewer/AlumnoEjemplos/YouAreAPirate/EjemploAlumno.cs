@@ -44,7 +44,7 @@ namespace AlumnoEjemplos.YouAreAPirate
         public override void init()
         {
             shipEnemies = new List<ShipObject>();
-            shipEnemies.Add(new ShipObject(EnumShipType.SS_Holigan, new Vector3(0, 0, 50)));
+            shipEnemies.Add(new ShipObject(EnumShipType.Standard, new Vector3(0, 0, 50)));
             loadModifiers();
             initializeEnviroment();
             initializeShip(EnumShipType.Standard,new Vector3(0,0,0));
