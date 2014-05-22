@@ -14,13 +14,15 @@ namespace AlumnoEjemplos.YouAreAPirate
 
         public void initializeCamera(TgcMesh objective)
         {
-      //      GuiController.Instance.ThirdPersonCamera.Enable = true;
-            GuiController.Instance.ThirdPersonCamera.setCamera(objective.Position, 50, 80);
+            //GuiController.Instance.ThirdPersonCamera.Enable = true;
+            //GuiController.Instance.ThirdPersonCamera.setCamera(objective.Position, 12, 12);
+            //GuiController.Instance.ThirdPersonCamera.TargetDisplacement = (Vector3)GuiController.Instance.Modifiers["cameraPosition"];
         }
 
         public void loadCamera(float elapsedTime, TgcBoundingBox objective)
         {
-            GuiController.Instance.ThirdPersonCamera.setCamera(objective.Position, 50, 80);
+            GuiController.Instance.ThirdPersonCamera.Target = (Vector3)GuiController.Instance.Modifiers["cameraPosition"];  
+
         }
     }
 }

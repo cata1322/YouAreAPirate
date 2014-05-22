@@ -21,7 +21,7 @@ namespace AlumnoEjemplos.YouAreAPirate
     public partial class EjemploAlumno
     {
         //Escalas de cada uno de los astros
-        readonly Vector3 SUN_SCALE = new Vector3(60, 60, 60);
+        readonly Vector3 SUN_SCALE = new Vector3(10, 10, 10);
 
         const float AXIS_ROTATION_SPEED = 0.01f;
         
@@ -46,7 +46,7 @@ namespace AlumnoEjemplos.YouAreAPirate
 
             //Posición del sol
             //NO logro ubicarlo arriba de todo. 
-            sol.Position = new Vector3(990, 500, 800);
+            sol.Position = new Vector3(990, 500, 1500);
 
             //Modifiers de la luz
             GuiController.Instance.Modifiers.addBoolean("lightEnable", "lightEnable", true);

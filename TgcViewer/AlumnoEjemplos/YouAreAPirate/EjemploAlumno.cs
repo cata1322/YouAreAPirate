@@ -16,6 +16,7 @@ namespace AlumnoEjemplos.YouAreAPirate
     /// </summary>
     public partial class EjemploAlumno : TgcExample
     {
+        List<ShipObject> shipEnemies { get; set; }        
 
         public void MetodoEjemeplo()
         {
@@ -42,41 +43,31 @@ namespace AlumnoEjemplos.YouAreAPirate
 
         public override void init()
         {
+            shipEnemies = new List<ShipObject>();
+            shipEnemies.Add(new ShipObject(EnumShipType.Standard, new Vector3(0, 0, 50)));
             loadModifiers();
             initializeEnviroment();
-            initializeShip();
-            initializeCamera(ship);
+            initializeShip(EnumShipType.Standard,new Vector3(0,0,0));
+            initializeEnemies(shipEnemies);
+            initializeCamera(ship.ship);
             //pueba del sol
-            initializeSol();
+            //initializeSol();
         }
+
+        
 
 
         public override void render(float elapsedTime)
         {
-
             loadEnviroment(elapsedTime);
             loadShip(elapsedTime);
-            loadCamera(elapsedTime, ship.BoundingBox);
+            loadCamera(elapsedTime, ship.getBoundingBox());
+            loadEnemies(elapsedTime);
             //pueba del sol
-            loadSol(elapsedTime);
-
+            //loadSol(elapsedTime);
         }
 
-        private void loadModifiers()
-        {
-            GuiController.Instance.Modifiers.addVertex3f("skyPosition", new Vector3(0, 0, 0), new Vector3(1000, 1000, 1000), new Vector3(20, 20, 20));
-            GuiController.Instance.Modifiers.addInt("skyRadius", 100, 10000, 2000);
-            GuiController.Instance.Modifiers.addVertex3f("oceanPosition", new Vector3(-1000, -1000, -1000), new Vector3(1000, 1000, 1000), new Vector3(-600, 0, -600));
-            GuiController.Instance.Modifiers.addVertex3f("oceanScale", new Vector3(10, 10, 10), new Vector3(1000, 1000, 1000), new Vector3(20, 20, 20));
-
-
-            //GuiController.Instance.Modifiers.addVertex3f("rotation", new Vector3(-180, -180, -180), new Vector3(180, 180, 180), new Vector3(0, 0, 0));
-            //GuiController.Instance.Modifiers.addTexture("texture", GuiController.Instance.ExamplesMediaDir + "\\Texturas\\madera.jpg");
-            //GuiController.Instance.Modifiers.addVertex2f("offset", new Vector2(-0.5f, -0.5f), new Vector2(0.9f, 0.9f), new Vector2(0, 0));
-            //GuiController.Instance.Modifiers.addVertex2f("tiling", new Vector2(0.1f, 0.1f), new Vector2(4, 4), new Vector2(1, 1));
-            //GuiController.Instance.Modifiers.addColor("color", Color.White);
-            //GuiController.Instance.Modifiers.addBoolean("boundingBox", "BoundingBox", false);
-        }
+         
 
 
         public override void close()
